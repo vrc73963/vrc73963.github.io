@@ -5,19 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #mobile{width: 500px ;
-            height: 500px;
-        border: 20px solid gray;
-    margin: 10px auto;}
+        #mobile{width: 620px ;
+            height: 620px;
+        border: 5px solid gray;
+    margin: 10px auto;
+position: relative;}
+
+    #mobile  div{
+        position: absolute;
+        width: 200px; 
+        height: 200px; }
+
+    #box1
+    {top: 100px; 
+        left: 100px;
+        background-color:  blue;}
+
+    #box2
+    {top: 200px; 
+        left: 200px;
+        background-color: greenyellow;}
+
+    #box3
+    { top: 300px; 
+        left: 300px;
+        background-color: red;}
     </style>
 </head>
 <body>
     <h1></h1>
 
     <div id="mobile">
-    <div></div> 
-    <div></div>
-    <div></div>
+    <div id="box1"></div> 
+    <div id="box2"></div>
+    <div id="box3"></div>
 </div>
 </body>
 </html>
