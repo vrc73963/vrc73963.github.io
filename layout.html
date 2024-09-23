@@ -4,106 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        img
+        {width:100%;}
+        main
+        {width: 90%;
+        padding: 25px;
+    margin: 0 auto;}
+    .center
+    {text-align: center;}
+    .row
+    {display: flex;
+    background-color: aliceblue;
+margin-bottom: 70px;
+border-radius: 10px;}
+.row img
+{border-radius: 10px;}
+.description
+{width: 65%;
+padding: 2%;
+margin: auto;}
+    </style>
 </head>
-<style>:root{
-    --white: #fff;
-    --boxBg: #ccc;
-    --pageBg: #ffffff;
-    --basePadding: 20px;
-    --baseMargin: 20px;
-}
-body{
-    background-color: var(--pageBg);
-    text-align: center;
-}
-.inner-header{
-background-color: aqua;
-}
-header, footer, #content, aside{
-    padding: var(--basePadding);
-}
-main{
-    padding: var(--basePadding);
-    width: 80%;
-    margin: 20px auto;
-    background-color: var(--white);
-    display: grid;
-    grid-gap: var(--basePadding);
-    grid-template-columns: auto auto 280px;
-    grid-template-areas:
-        "header header header"
-        "col1 col1 col2 "
-        "footer footer footer"
-}
-main > * {
-    background-color: var(--boxBg);
-}
-header{
-    grid-area: header;
-}
-footer{
-    grid-area: footer;
-}
-header, footer, article, aside{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.col1, .col2.col3.col4{
-    min-height: 200px;
-}
-.col1{
-    grid-area: col1;
-}
-.col2{
-    grid-area: col2;
-
-}
-
-.col3{min-height: 200px;
-    grid-area:width 70%;
-    margin: 20px auto
-     col3;
-}
-.col4{min-height: 200px;
-    grid-area:width 30%;
-    margin: 20px auto col4;
-}
-
-.col5{min-height: 200px;
-    grid-area:width 70%;
-    margin: 20px auto col5;
-}
-
-
-.col6{min-height: 200px;
-    grid-area:width 70%;
-    margin: 20px auto col6;
-}
-.inner-header{
-display: flex;
-justify-content: space-between;
-}</style>
 <body>
-    <h1>2 Column</h1>
     <main>
-        <header class="grid-header header-bg">
-      
-          <div class="inner-header">
-          <div class="logo"></div>
-          <div class="profile"></div>
-          </div>
-      </header>
-        <article class="col1">1</article>
-        <aside class="col2">2</aside>
+        <div id="place1">
+            <div class="row">
+            <div><img src="https://placehold.co/600x400" alt="image1">
+    
+        <h2> the pennslyvania grand canyon</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate consequuntur reprehenderit distinctio, perspiciatis doloremque consectetur et nostrum rem obcaecati neque fugiat optio repellendus alias non officiis veritatis nobis! Amet, at. Dolorem earum dignissimos facilis veniam. Cumque itaque consequatur dignissimos fugit?</p>
+    <a href="#" >visit site</a>
+</div>
 
-        <article class="col3">3</article>
-        <aside class="col4">4</aside>
+<div id="place2">
+    <div class="row">
+    <div><img src="https://placehold.co/600x400" alt="image2">
 
-        <article class="col5">5</article>
-        <aside class="col6">6</aside>
+<h2> wkjf</h2>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate consequuntur reprehenderit distinctio, perspiciatis doloremque consectetur et nostrum rem obcaecati neque fugiat optio repellendus alias non officiis veritatis nobis! Amet, at. Dolorem earum dignissimos facilis veniam. Cumque itaque consequatur dignissimos fugit?</p>
+<a href="#" >visit site</a>
+</div>
+<div id="place3"></div>
+    <div class="row">
+    <div><img src="https://placehold.co/600x400" alt="image3">
 
-        <footer>Footer</footer>
+<h2> wkjf</h2>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate consequuntur reprehenderit distinctio, perspiciatis doloremque consectetur et nostrum rem obcaecati neque fugiat optio repellendus alias non officiis veritatis nobis! Amet, at. Dolorem earum dignissimos facilis veniam. Cumque itaque consequatur dignissimos fugit?</p>
+<a href="#" >visit site</a>
+</div>
+<div id="place4"></div>
+    <div class="row">
+    <div><img src="https://placehold.co/600x400" alt="image4">
+
+<h2> wkjf</h2>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate consequuntur reprehenderit distinctio, perspiciatis doloremque consectetur et nostrum rem obcaecati neque fugiat optio repellendus alias non officiis veritatis nobis! Amet, at. Dolorem earum dignissimos facilis veniam. Cumque itaque consequatur dignissimos fugit?</p>
+<a href="#" >visit site</a>
+</div>
     </main>
 </body>
 </html>
