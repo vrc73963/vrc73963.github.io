@@ -1,0 +1,14 @@
+
+html{scroll-behavior: smooth;}
+ body{margin: 0 auto;
+background-color: antiquewhite;
+font-family: Arial, Helvetica, sans-serif;}
+
+img
+{width: 100%;
+height: auto;}
+main{background-color: aliceblue;
+padding: 1em;
+margin: 0 auto;
+max-width: 1000px;
+}
