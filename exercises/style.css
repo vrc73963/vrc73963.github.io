@@ -1,6 +1,54 @@
-#main {
-    margin: 0 auto;
-    padding: 1em;
-  }
+main {
+    padding: 1em; }
+
   body
-  {background-color: aqua;}
+ {
+  margin: 0;
+padding: 10px;}
+
+#primary
+{background-color: rgb(219, 186, 250);}
+
+#primary li
+{list-style: none;
+font-weight:bold;
+font-style: oblique;
+display:inline-block;
+}
+
+#primary ul
+{padding:0;}
+
+#primary a
+{padding: 0.5 1em;
+display: block;}
+
+@media (max-width: 767px){
+  #ham{
+    display:block;
+  }
+ 
+  #primary li 
+  {display: block;} 
+
+  .inner{
+    overflow: hidden;
+  }
+  #primary{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+  }
+  }
+
+  
+#ham
+{font-size: 36px;
+  background-color: transparent;
+  position: absolute;
+  top:0em;
+  border: none;
+  right: 0em;
+  display: none;
+}
+
