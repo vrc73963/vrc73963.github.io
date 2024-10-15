@@ -3,8 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>responsive nav</title>
+    <style>
+      main {
+        padding: 1em;
+      }
+
+      body {
+        margin: 0;
+        padding: 10px;
+      }
+
+      #primary {
+        background-color: rgb(219, 186, 250);
+      }
+
+      #primary li {
+        list-style: none;
+        font-weight: bold;
+        font-style: oblique;
+        display: inline-block;
+      }
+
+      #primary ul {
+        padding: 0;
+      }
+
+      #primary a {
+        padding: 0.5 1em;
+        display: block;
+      }
+
+      @media (max-width: 767px) {
+        #ham {
+          display: block;
+        }
+
+        #primary li {
+          display: block;
+        }
+
+      }
+
+      #ham {
+        font-size: 36px;
+        background-color: transparent;
+        position: absolute;
+        top: 0em;
+        border: none;
+        right: 0em;
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <button id="ham">&#9776;</button>
@@ -13,13 +63,13 @@
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="demo2.html">about</a></li>
-          <li><a href="#">zoom</a></li>
+          <li><a href="exercise5.html">zoom</a></li>
           <li><a href="#">doom</a></li>
         </ul>
       </div>
     </nav>
 
-    <h1>hey responsive page</h1>
+    <h1>Hey responsive page</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias
       saepe sed sit quos, dicta error voluptate incidunt perferendis iste
