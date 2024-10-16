@@ -33,27 +33,34 @@
         padding: 0.5 1em;
         display: block;
       }
-
-      @media (max-width: 767px) {
-        #ham {
-          display: block;
-        }
-
-        #primary li {
-          display: block;
-        }
-
-      }
-
       #ham {
         font-size: 36px;
         background-color: transparent;
         position: absolute;
-        top: 0em;
+        top: 0;
         border: none;
-        right: 0em;
+        right: 0;
         display: none;
         cursor: pointer;
+      }
+      @media (max-width: 767px) {
+        #primary {
+          display: grid;
+          grid-template-rows: 0fr;
+          transition: grid-template-rows 0.5s ease-out;
+        }
+        #primary li {
+          display: block;
+        }
+        body.nav-open #primary {
+          grid-template-rows: 1fr;
+        }
+        #inner {
+          overflow: hidden;
+        }
+        #ham {
+          display: block; /* display button beneath breakpoint */
+        }
       }
     </style>
   </head>
@@ -77,6 +84,13 @@
       perspiciatis, laboriosam totam cumque voluptas, ipsam labore tenetur
       doloremque reiciendis.
     </p>
-    <script></script>
+    <script>
+      window.onload = () => {
+        const ham = document.getElementById("ham");
+
+        ham.addEventListener("click", () => {
+          document.body.classList.toggle("nav-open");
+        });
+      };
+    </script>
   </body>
-</html>

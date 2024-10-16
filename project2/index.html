@@ -6,11 +6,17 @@
     <title>Instructional Site</title>
     <link rel="NEXT" href="demo.html" />
     <style>
+      html {
+        width: 100%;
+        height: 100%;
+      }
       body {
-        height: 2200px;
-        max-width: 1480px;
         background-image: linear-gradient(#f06060, #742727);
-        margin: auto;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        margin: 0;
       }
 
       #gradient {
@@ -22,7 +28,7 @@
       }
 
       #title1 {
-        color: rgb(246, 214, 96);
+        color: #dec051;
         text-align: center;
         padding: 2em;
         font-size: 22px;
@@ -58,21 +64,29 @@
         color: rgb(255, 255, 255);
         cursor: pointer;
         font-size: 50px;
+        position: absolute;
       }
 
       @media (max-width: 767px) {
         #NEXT {
           background-color: blue;
+          border-radius: 10px;
         }
+      }
+      #name {
+        text-align: center;
+        font-size: 34px;
+        display: block;
+        font-family: Helvetica, Arial, sans-serif;
       }
     </style>
   </head>
   <body>
+    <div id="gradient">
+      <button id="ham">&#9776;</button>
+      <div id="name">EZPZ TUTORAIL</div>
+    </div>
     <main>
-      <div id="gradient">
-        <button id="ham">&#9776;</button>
-        <div id="name">EZPZ TUTORAIL</div>
-      </div>
       <div id="title1">
         <h1>Setting up a computer can be straightforward</h1>
         <div id="picture">
