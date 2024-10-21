@@ -3,25 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instructional Site</title>
-    <link rel="NEXT" href="demo.html" />
+    <title>Document</title>
+    <!--https://vrc73963.github.io/project2/index.html-->
     <style>
-     
       body {
-        background-image: linear-gradient(#f06060, #742727);
-        background-size: cover;
-        width: 100%;
         height: 100%;
+        width: 100%;
+        background-image: linear-gradient(#f06060, #742727);
+        margin: auto;
+        background-size: color;
         background-repeat: no-repeat;
-        margin: 0;
       }
 
       #gradient {
         height: 80px;
         background-color: #742727;
         padding: 1em;
-        border-radius: 5px;
-        color: aliceblue;
       }
 
       #title1 {
@@ -38,6 +35,15 @@
         font-size: 22px;
         text-align: left;
       }
+      #one {
+        margin-bottom: 15px;
+      }
+      #two {
+        margin-bottom: 15px;
+      }
+      #three {
+        margin-bottom: 0px;
+      }
       #picture {
         padding: 0.5em;
       }
@@ -47,7 +53,9 @@
         color: white;
         font-size: 34px;
         text-align: right;
-        padding: 1.5em;
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-top: 50px;
         cursor: pointer;
       }
       .responsive {
@@ -61,53 +69,45 @@
         color: rgb(255, 255, 255);
         cursor: pointer;
         font-size: 50px;
-        position: absolute;
       }
-      #name {
-        text-align: center;
-        color: #dec051;
-        font-size: 34px;
-        display: block;
-        font-family: Helvetica, Arial, sans-serif;
-      }
-   
 
       @media (max-width: 767px) {
         #NEXT {
-          background-color: #dec051;  
+          background-color: #dec051;
           border-radius: 10px;
         }
       }
-      
     </style>
   </head>
   <body>
-    <div id="gradient">
-      <button id="ham">&#9776;</button>
-      <div id="name">EZPZ TUTORIAL</div>
-    
-  </div>
-    
+    <div id="gradient"><button id="ham">&#9776;</button></div>
     <main>
       <div id="title1">
-        <h1>Setting up a computer can be straightforward</h1>
+        <h1>6. Configure Settings</h1>
         <div id="picture">
           <img
-            src="images/image 1.jpg"
+            src="images/Firefly settings screen on monitor 66874.jpg"
             alt="placehold"
             class="responsive"
             width="600"
             height="400"
           />
-          <p id="fp">
-            Welcome to our comprehensive guide on setting up your new computer!
-            Whether you're a first-time user or looking to refresh your tech
-            skills, we’re here to make the process as easy and enjoyable as
-            possible. Let’s dive in and unlock the full potential of your new
-            device!
-          </p>
-          <a href="page1.html">
-            <button id="NEXT">BEGIN</button>
+          <ul id="fp">
+            <li id="one">
+              Personalize your computer by adjusting settings like display
+              resolution, sound preferences, and power options.
+            </li>
+            <li id="two">
+              Set up your desktop layout and organize files in a way that suits
+              your workflow.
+            </li>
+          </ul>
+
+          <a href="page5.html">
+            <button id="NEXT">BACK</button>
+          </a>
+          <a href="#">
+            <button id="NEXT">NEXT</button>
           </a>
         </div>
       </div>

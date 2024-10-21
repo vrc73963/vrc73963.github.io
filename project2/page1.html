@@ -7,11 +7,14 @@
     <!--https://vrc73963.github.io/project2/index.html-->
     <style>
       body {
-        height: 2200px;
-        max-width: 1480px;
+        height: 100%;
+       width: 100%;
         background-image: linear-gradient(#f06060, #742727);
         margin: auto;
+        background-size: color;
+        background-repeat: no-repeat;
       }
+     
 
       #gradient {
         height: 80px;
@@ -71,20 +74,21 @@
 
       @media (max-width: 767px) {
         #NEXT {
-          background-color: blue;
+          background-color: #dec051;
           border-radius: 10px;
         }
       }
     </style>
   </head>
   <body>
+    <div id="gradient"><button id="ham">&#9776;</button></div>
     <main>
-      <div id="gradient"><button id="ham">&#9776;</button></div>
+      
       <div id="title1">
         <h1>1. Unpack and Connect</h1>
         <div id="picture">
           <img
-            src="https://placehold.co/990x700"
+            src="images/Firefly unpacking a gaming pc out of the box 1086.jpg"
             alt="placehold"
             class="responsive"
             width="600"
@@ -107,7 +111,7 @@
           <a href="index.html">
             <button id="NEXT">BACK</button>
           </a>
-          <a href="#">
+          <a href="page2.HTML">
             <button id="NEXT">NEXT</button>
           </a>
         </div>
