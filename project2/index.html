@@ -66,26 +66,100 @@
         font-size: 50px;
         position: absolute;
       }
-
-      @media (max-width: 767px) {
-        #NEXT {
-          background-color: blue;
-          border-radius: 10px;
-        }
-      }
       #name {
         text-align: center;
-        font-size: 34px;
+        color: #dec051;
+        font-size: 25px;
         display: block;
         font-family: Helvetica, Arial, sans-serif;
       }
+      .OFF-SCREEN {
+        background-color: #742727;
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        transition: 0.3s ease-in;
+      }
+      .OFF-SCREEN-MENU.active {
+        right: 0;
+      }
+      nav {
+        padding: 1rem;
+        display: flex;
+        background-color: #742727;
+        border-radius: 5px;
+      }
+      .ham-menu {
+        height: 50px;
+        width: 50px;
+        margin-left: auto;
+        position: relative;
+      }
+      .ham-menu span {
+        height: 5px;
+        width: 100%;
+        background-color: #dec051;
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3 ease-out;
+      }
+      .ham-menu span:nth-child(1) {
+        top: 25%;
+      }
+      .ham-menu span:nth-child(3) {
+        top: 75%;
+      }
+      .ham-menu.active span:nth-child(1) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      .ham-menu.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .ham-menu.active span:nth-child(3) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      @media (max-width: 767px) {
+        #NEXT {
+          background-color:blue;
+          border-radius: 10px;
+        }
+      }
+      
     </style>
   </head>
   <body>
-    <div id="gradient">
-      <button id="ham">&#9776;</button>
-      <div id="name">EZPZ TUTORAIL</div>
+    <div class="off-screen">
+      <ul>
+        <li>HOME</li>
+        <li>ABOUT</li>
+        <li>CONTACT</li>
+      </ul>
     </div>
+    <nav>
+      <h1 ID="name">EZPZ TUTORAIL</h1>
+      
+      <div class="ham-menu">
+        
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+   
     <main>
       <div id="title1">
         <h1>Setting up a computer can be straightforward</h1>
@@ -109,6 +183,15 @@
           </a>
         </div>
       </div>
+      <script>
+        const hammenu = document.querySelector(".ham-menu");
+
+        const OFFSCREENMENU = document.querySelector(".off-screen-menu");
+
+        hammenu.addEventListener("click", () => {
+          hammenu.classList.toggle("active");
+        });
+      </script>
     </main>
   </body>
 </html>
