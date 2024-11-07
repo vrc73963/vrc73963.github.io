@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alice in Wonderland</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      nav {
+        background: #4e9b6d;
+        padding: 2rem;
+        position: relative;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 5rem;
+        
+      }
+
+      .nav-links a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-family: Poppins, Arial, sans-serif;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+        font-weight: bold;
+      }
+
+      .nav-links a:hover {
+        color: #d45d9a;
+        text-decoration: underline;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0.5rem;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+      }
+
+      .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 5px 0;
+        transition: 0.4s;
+      }
+      body {
+        background-color: #f0f8ff;
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+      }
+      
+     
+      .para{
+        font-size:26px ;
+        padding: 1.4em;
+        display: flex;
+        
+        
+      }
+      #lewis img {
+        border-radius: 50%;
+        padding: 80px;
+        
+      }
+      p{
+        margin-bottom: 28px;
+        max-width: 100%;
+       
+      }
+      
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+          z-index: 2;
+        }
+
+        .nav-links {
+          position: fixed;
+          right: -100%;
+          top: 0;
+          flex-direction: column;
+          background: #00230e;
+          width: 100%;
+          height: 100vh;
+          padding: 5rem 2rem;
+          transition: 0.3s;
+          align-items: center;
+        }
+
+        .nav-links.active {
+          right: 0;
+        }
+
+        .hamburger.active span:nth-child(1) {
+          transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+        }
+        
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        
+        <img src="images/Callidus logo 12.jpg" alt="logo" />
+        <li><a href="#">Biography</a></li>
+        <li><a href="#">Book</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Purchase</a></li>
+      </ul>
+    </nav>
+    
+      
+      <div class="para">
+        <div>
+        <p>
+            Lewis Carroll was the pen name of Charles Lutwidge Dodgson, a renowned
+            English writer, mathematician, logician, and photographer. He was born
+            on January 27, 1832, in Daresbury, Cheshire, England, and passed away
+            on January 14, 1898, in Guildford, Surrey, England. Carroll is best
+            known for his imaginative literary works, particularly "Alice's
+            Adventures in Wonderland" and its sequel, "Through the Looking-Glass."
+          </p>
+          <p>
+            Dodgson was the eldest son in a family of eleven children. He
+            displayed an early aptitude for mathematics and showed great promise
+            in the subject. In 1851, he enrolled at Oxford University's Christ
+            Church, where he eventually became a mathematical lecturer and
+            remained closely associated with the institution for the rest of his
+            life.
+          </p>
+        
+          <p>
+            Apart from writing and mathematics, Carroll had a passion for
+            photography. He was an early adopter of the medium and became skilled
+            in the art. Carroll photographed a wide range of subjects, including
+            children, famous personalities, and landscapes. His photographic work
+            remains influential, particularly his portraits of children.
+          </p>
+        </div>
+
+        <div id="lewis">
+        <img src="https://placehold.co/433x445" alt="Lewis-Carroll">
+    </div>
+    </div>
+    
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close menu when clicking a link (mobile)
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

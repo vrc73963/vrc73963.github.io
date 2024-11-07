@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alice in Wonderland</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       * {
         margin: 0;
@@ -25,9 +31,9 @@
       }
 
       .nav-links a {
-        color: white;
+        color: rgb(255, 255, 255);
         text-decoration: none;
-        font-family: Arial, sans-serif;
+        font-family: Poppins, Arial, sans-serif;
         font-size: 1.2rem;
         transition: color 0.3s ease;
         font-weight: bold;
@@ -59,6 +65,7 @@
       }
       body {
         background-color: #f0f8ff;
+        font-family: Poppins, Arial, Helvetica, sans-serif;
       }
       .bookcover {
         padding: 3em;
@@ -66,7 +73,12 @@
       }
       .responsive {
         width: 100%;
-        height: auto;
+        height: 100%;
+      }
+      .para {
+        font-size: 32px;
+        padding: 2em;
+        padding-top: 9em;
       }
 
       @media (max-width: 768px) {
@@ -103,6 +115,10 @@
         .hamburger.active span:nth-child(3) {
           transform: rotate(-45deg) translate(5px, -5px);
         }
+        .bookcover {
+          flex-direction: column;
+          
+        }
       }
     </style>
   </head>
@@ -115,8 +131,8 @@
       </button>
 
       <ul class="nav-links">
-        <img src="images/Callidus logo 12.jpg" alt="logo" />
-        <li><a href="#">Biography</a></li>
+        <button><img src="images/Callidus logo 12.jpg" alt="logo" /></button>
+        <li><a href="bio.html">Biography</a></li>
         <li><a href="#">Book</a></li>
         <li><a href="#">Reviews</a></li>
         <li><a href="#">Purchase</a></li>
@@ -130,16 +146,17 @@
         width="600"
         height="400"
       />
-      <div id="text">
+      <div class="para">
         <p>
-          In "Alice in Wonderland" young Alice follows a white rabbit down a
-          rabbit hole and finds herself in a peculiar and enchanting world
-          called Wonderland. Throughout her journey, she encounters a series of
-          eccentric and whimsical characters, such as the Cheshire Cat, the Mad
-          Hatter, and the Queen of Hearts. Alice navigates through a topsy-turvy
-          realm where logic is often turned upside down, and nothing is as it
-          seems.
-        </p>
+            In "Alice in Wonderland" young Alice follows a white rabbit down a
+            rabbit hole and finds herself in a peculiar and enchanting world
+            called Wonderland. Throughout her journey, she encounters a series of
+            eccentric and whimsical characters, such as the Cheshire Cat, the Mad
+            Hatter, and the Queen of Hearts. Alice navigates through a topsy-turvy
+            realm where logic is often turned upside down, and nothing is as it
+            seems.
+          </p>
+     
       </div>
     </div>
 
