@@ -10,6 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Favicon link -->
+    <link rel="icon" href="images/cheshirskiy-kot-alisa-v-strane.png" type="favicon">
+
+</html>
+
     <style>
       * {
         margin: 0;
@@ -28,7 +34,6 @@
         justify-content: center;
         list-style: none;
         gap: 5rem;
-        
       }
 
       .nav-links a {
@@ -68,24 +73,38 @@
         background-color: #f0f8ff;
         font-family: Poppins, Arial, Helvetica, sans-serif;
       }
-      
-     
-      .para{
-        font-size:26px ;
-        padding: 1.4em;
+
+      .para {
+        font-size: 26px;
+        padding: 1.6em;
         display: flex;
-        
-        
+        padding-top: 2em;
       }
       #lewis img {
         border-radius: 50%;
         padding: 80px;
-        
       }
-      p{
+      p {
         margin-bottom: 28px;
         max-width: 100%;
-       
+      }
+      #lewis{
+        text-align: center;
+        font-weight: bold;
+        color: #d45d9a;
+        display: flex; 
+        padding-bottom:1.2em ;
+         padding-top: 0;
+
+
+      }
+      .title{
+        text-align: center;
+        font-weight: bold;
+        padding: 1.2em;
+        padding-bottom: 1.2em;
+        font-size: 40px;
+        color: #d45d9a;
       }
       
 
@@ -123,7 +142,21 @@
         .hamburger.active span:nth-child(3) {
           transform: rotate(-45deg) translate(5px, -5px);
         }
-        
+        .lewis {
+          flex-direction:column;
+          transition: 2s;
+          
+          
+          
+        }
+        .para{
+          flex-direction:column-reverse;
+          
+        }
+        .title{
+          padding: 1.2em;
+        padding-bottom: 0;
+        }
       }
     </style>
   </head>
@@ -136,49 +169,57 @@
       </button>
 
       <ul class="nav-links">
-        
-        <img src="images/Callidus logo 12.jpg" alt="logo" />
+        <a href="index.html"> <img src="images/Callidus logo 12.jpg" width=”100″ height=”132″> </a>
         <li><a href="#">Biography</a></li>
         <li><a href="#">Book</a></li>
         <li><a href="#">Reviews</a></li>
         <li><a href="#">Purchase</a></li>
       </ul>
     </nav>
-    
-      
-      <div class="para">
-        <div>
-        <p>
-            Lewis Carroll was the pen name of Charles Lutwidge Dodgson, a renowned
-            English writer, mathematician, logician, and photographer. He was born
-            on January 27, 1832, in Daresbury, Cheshire, England, and passed away
-            on January 14, 1898, in Guildford, Surrey, England. Carroll is best
-            known for his imaginative literary works, particularly "Alice's
-            Adventures in Wonderland" and its sequel, "Through the Looking-Glass."
-          </p>
-          <p>
-            Dodgson was the eldest son in a family of eleven children. He
-            displayed an early aptitude for mathematics and showed great promise
-            in the subject. In 1851, he enrolled at Oxford University's Christ
-            Church, where he eventually became a mathematical lecturer and
-            remained closely associated with the institution for the rest of his
-            life.
-          </p>
-        
-          <p>
-            Apart from writing and mathematics, Carroll had a passion for
-            photography. He was an early adopter of the medium and became skilled
-            in the art. Carroll photographed a wide range of subjects, including
-            children, famous personalities, and landscapes. His photographic work
-            remains influential, particularly his portraits of children.
-          </p>
-        </div>
+    <h1 class="title">Biography</h1>
 
-        <div id="lewis">
-        <img src="https://placehold.co/433x445" alt="Lewis-Carroll">
+    <div class="para">
+      <div>
+        
+        <p>
+          Lewis Carroll was the pen name of Charles Lutwidge Dodgson, a renowned
+          English writer, mathematician, logician, and photographer. He was born
+          on January 27, 1832, in Daresbury, Cheshire, England, and passed away
+          on January 14, 1898, in Guildford, Surrey, England. Carroll is best
+          known for his imaginative literary works, particularly "Alice's
+          Adventures in Wonderland" and its sequel, "Through the Looking-Glass."
+        </p>
+        <p>
+          Dodgson was the eldest son in a family of eleven children. He
+          displayed an early aptitude for mathematics and showed great promise
+          in the subject. In 1851, he enrolled at Oxford University's Christ
+          Church, where he eventually became a mathematical lecturer and
+          remained closely associated with the institution for the rest of his
+          life.
+        </p>
+
+        <p>
+          Apart from writing and mathematics, Carroll had a passion for
+          photography. He was an early adopter of the medium and became skilled
+          in the art. Carroll photographed a wide range of subjects, including
+          children, famous personalities, and landscapes. His photographic work
+          remains influential, particularly his portraits of children.
+        </p>
+      </div>
+
+      <div id="lewis">
+        
+        <figure>
+          <img
+            src="https://placehold.co/433x445"
+            alt="Lewis-Carroll"/>
+          <figcaption>Author : Lewis Carroll</figcaption>
+        </figure>
+        
+
+       
+      </div>
     </div>
-    </div>
-    
 
     <script>
       const hamburger = document.querySelector(".hamburger");
