@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alice in Wonderland</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon link -->
+    <link
+      rel="icon"
+      href="images/cheshirskiy-kot-alisa-v-strane.png"
+      type="favicon"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      nav {
+        background: #4e9b6d;
+        padding: 2rem;
+        position: relative;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 5rem;
+      }
+
+      .nav-links a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-family: Poppins, Arial, sans-serif;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+        font-weight: bold;
+      }
+
+      .nav-links a:hover {
+        color: #d45d9a;
+        text-decoration: underline;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0.5rem;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+      }
+
+      .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 5px 0;
+        transition: 0.4s;
+      }
+      body {
+        background-color: #f0f8ff;
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        font-weight: bold;
+        padding: 1.2em;
+        padding-bottom: 1.2em;
+        font-size: 42px;
+        color: #d45d9a;
+      }
+      h2 {
+        color: #d45d9a;
+        padding-bottom: 0.7em;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .box {
+        flex: 1;
+        border: 2px solid red;
+        padding: 20px;
+        border-radius: 4px;
+        min-height: 200px;
+        background-color: white;
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+          z-index: 2;
+        }
+
+        .nav-links {
+          position: fixed;
+          right: -100%;
+          top: 0;
+          flex-direction: column;
+          background: #00230e;
+          width: 100%;
+          height: 100vh;
+          padding: 5rem 2rem;
+          transition: 0.3s;
+          align-items: center;
+        }
+
+        .nav-links.active {
+          right: 0;
+        }
+
+        .hamburger.active span:nth-child(1) {
+          transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+        }
+        .container{
+            flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <a href="index.html">
+          <img src="images/Callidus logo 12.jpg" width="”100″" height="”132″" />
+        </a>
+        <li><a href="bio.html">Biography</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li><a href="purchase.html">Purchase</a></li>
+      </ul>
+    </nav>
+    <h1>Reviews</h1>
+    <div class="container">
+      <div class="box">
+        <h2>
+          Jay Pritchett : A Captivating Journey into Wonderland Rating: ★★★★☆
+        </h2>
+        <p>
+          "Alice in Wonderland" by Lewis Carroll is a whimsical and enchanting
+          tale that takes readers on a delightful journey through a world of
+          absurdity and imagination. Carroll's storytelling is incredibly
+          imaginative, filled with quirky characters and nonsensical situations
+          that will captivate readers of all ages. The protagonist, Alice, is a
+          curious and adventurous young girl who finds herself tumbling down a
+          rabbit hole into a topsy-turvy world. Throughout her encounters with
+          peculiar creatures like the Cheshire Cat, the Mad Hatter, and the
+          Queen of Hearts, Alice navigates through a series of fantastical
+          events that challenge logic and reason. Carroll's playful language and
+          clever wordplay add an extra layer of enjoyment to the story, creating
+          a unique reading experience. While "Alice in Wonderland" may appear to
+          be a children's book on the surface, it holds a deeper meaning that
+          transcends age. Carroll's satirical commentary on Victorian society
+          and its rigid conventions is subtly woven into the narrative, offering
+          readers a thought-provoking and allegorical reading experience.
+        </p>
+      </div>
+
+      <div class="box">
+        <h2>
+          Manny Delgado: A Wonderland of Curiosities and Absurdities Rating:
+          ★★★☆☆
+        </h2>
+        <p>
+          "Alice in Wonderland" by Lewis Carroll is a peculiar and bewildering
+          tale that will either enchant or frustrate readers. Carroll's vivid
+          descriptions and imaginative world-building are commendable, but the
+          lack of a cohesive plot may leave some readers feeling disoriented.
+          The story follows young Alice as she falls down a rabbit hole into a
+          whimsical land populated by talking animals, eccentric characters, and
+          nonsensical riddles. While the imaginative elements and clever
+          wordplay are entertaining, the narrative often meanders without a
+          clear direction, making it challenging to fully engage with the story.
+          Carroll's writing style is undoubtedly unique, filled with witty and
+          humorous dialogue. However, it can also be dense and overly verbose at
+          times, making certain sections of the book feel laborious to read.
+          Despite its shortcomings, "Alice in Wonderland" remains a significant
+          work in the realm of children's literature. Its nonsensical nature has
+          intrigued readers for generations, and Carroll's social commentary and
+          satirical jabs at Victorian society add depth to the story.
+        </p>
+      </div>
+
+      <div class="box">
+        <h2>
+          Phil Dunphy: A Timeless Masterpiece of Imagination Rating: ★★★★★
+        </h2>
+        <p>
+          Lewis Carroll's "Alice in Wonderland" is an enduring masterpiece that
+          continues to captivate readers of all ages. From the moment Alice
+          falls down the rabbit hole, readers are transported into a world
+          filled with enchantment, absurdity, and profound philosophical
+          undertones. Carroll's imaginative storytelling is unparalleled,
+          creating a tapestry of vibrant characters and surreal landscapes. The
+          Mad Hatter's tea party, the enigmatic Cheshire Cat, and the tyrannical
+          Queen of Hearts are just a few of the iconic figures that populate
+          Wonderland. Each encounter Alice has is a whimsical adventure,
+          challenging the boundaries of logic and inviting readers to question
+          the nature of reality. What sets "Alice in Wonderland" apart is
+          Carroll's skillful blend of fantasy and wit. The wordplay, riddles,
+          and puns sprinkled throughout the narrative add an extra layer of
+          enjoyment for readers of all ages. Additionally, Carroll's subtle
+          social commentary on Victorian society adds depth to the story,
+          allowing readers to interpret the tale on multiple levels.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close menu when clicking a link (mobile)
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alice in Wonderland</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon link -->
+    <link
+      rel="icon"
+      href="images/cheshirskiy-kot-alisa-v-strane.png"
+      type="favicon"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      nav {
+        background: #4e9b6d;
+        padding: 2rem;
+        position: relative;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 5rem;
+      }
+
+      .nav-links a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-family: Poppins, Arial, sans-serif;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+        font-weight: bold;
+      }
+
+      .nav-links a:hover {
+        color: #d45d9a;
+        text-decoration: underline;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0.5rem;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+      }
+
+      .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 5px 0;
+        transition: 0.4s;
+      }
+      body {
+        background-color: #f0f8ff;
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+      }
+      .para {
+        font-size: 26px;
+        padding: 1.6em;
+        display: flex;
+        padding-top: 2em;
+      }
+      .bookcover {
+        padding: 2.6em;
+        display: flex;
+      }
+      .responsive {
+        width: 100%;
+        height: 100%;
+      }
+      #buy {
+        
+        border-radius: 20%;
+        background-color: #ed6110;
+        font-size:34px ;
+        color:white ;
+        cursor: pointer;
+        padding: 32px;
+      }
+
+      h1{
+        text-align: center;
+        font-weight: bold;
+        padding: 1.2em;
+        padding-bottom: 1.2em;
+        font-size: 42px;
+        color: #d45d9a;
+      }
+      .hpo{
+        color: #d45d9a;
+        font-size:32px ;
+        padding: 2em;
+        font-weight:bold ;
+        text-align: center ;
+        
+      }
+      #para{
+        padding: 2em;
+        font-size: 26px;
+        display: flex;
+      }
+      .bookcover{
+        display: flex;
+        max-width: 1400px;
+       align-content: center;
+       display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  filter: drop-shadow(30px 0px 20px #00230E );
+  
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+          z-index: 2;
+        }
+
+        .nav-links {
+          position: fixed;
+          right: -100%;
+          top: 0;
+          flex-direction: column;
+          background: #00230e;
+          width: 100%;
+          height: 100vh;
+          padding: 5rem 2rem;
+          transition: 0.3s;
+          align-items: center;
+        }
+
+        .nav-links.active {
+          right: 0;
+        }
+
+        .hamburger.active span:nth-child(1) {
+          transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <a href="index.html">
+          <img src="images/Callidus logo 12.jpg" width="”100″" height="”132″" />
+        </a>
+        <li><a href="bio.html">Biography</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li><a href="purchase.html">Purchase</a></li>
+      </ul>
+    </nav>
+
+    <h1>About the book</h1>
+    <div id="para">
+      "Alice in Wonderland," written by Lewis Carroll, follows the whimsical
+      adventures of a young girl named Alice who tumbles down a rabbit hole into
+      a fantastical world filled with peculiar characters and absurd situations.
+      As she navigates this surreal landscape, Alice encounters the eccentric
+      Mad Hatter, the enigmatic Cheshire Cat, and the tyrannical Queen of
+      Hearts, among others. The story explores themes of identity, curiosity,
+      and the challenges of growing up, all wrapped in a playful narrative that
+      blends fantasy with clever wordplay and nonsensical logic. Its enduring
+      charm has made it a beloved classic for readers of all ages.
+    </div>
+    <div class="bookcover">
+      <img
+        src="images/alice in wonderland-01234.jpg"
+        alt="bookcover"
+        class="responsive"
+        width="600"
+        height="400"
+      />
+    </div>
+    <div class="hpo">Book available in : Hardcover, Paperback and Online
+    <button id="buy">Buy Now</button></div>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close menu when clicking a link (mobile)
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
