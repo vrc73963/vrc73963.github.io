@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex {
+        display: flex;
+        gap: 1em;
+      }
+      .flex > div {
+        border: 4px dotted lightgray;
+        flex-basis: 100%;
+      }
+      .spaced-list li {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <div>
+        <ol class="spaced-list">
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+        </ol>
+      </div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <footer>
+      <ol>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ol>
+    </footer>
+  </body>
+</html>

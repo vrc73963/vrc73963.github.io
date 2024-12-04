@@ -11,6 +11,9 @@ body {
     background-color: #1E1E1E;
 }
 
+h1{
+    text-align: center;
+}
 .navbar {
     background-color: #FF0092;
     display: flex;
@@ -20,9 +23,9 @@ body {
     position: relative;
 }
 
-.logo-img {
-    width: 100px; /* Adjust based on your logo size */
-}
+img
+{width: 100%;
+     height: auto;}
 
 .nav-links {
     display: flex;

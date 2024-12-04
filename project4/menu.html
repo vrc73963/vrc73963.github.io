@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LIQUID LIBRARY | MENU</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,6 +19,46 @@
     />
     <link rel="stylesheet" href="4.css" />
     <link rel="javascript" href="script.js" />
+    <style>
+      .blue {
+        border-style: solid;
+        border-color: blue;
+        border-width: 2px;
+        color: rgb(255, 255, 255);
+        padding: 40px;
+        display: flex;
+        gap: 4em;
+      }
+      .alt1 {
+        padding: 1em;
+        color: #aeff00;
+        padding-left: 0;
+      }
+      .alt2 {
+        padding: 1em;
+        color: #ff7300;
+        padding-left: 0;
+      }
+      .alt3 {
+        padding: 1em;
+        color: #ff0092;
+        padding-left: 0;
+      }
+      .flex {
+        display: flex;
+        gap: 1em;
+      }
+      .flex > div {
+        border: 4px dotted lightgray;
+        flex-basis: 100%;
+      }
+      .spaced-list li {
+        margin-bottom: 20px;
+      }
+      ol {
+        padding-left: 22px;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar">
@@ -42,18 +82,78 @@
         <div class="line"></div>
       </div>
     </nav>
- 
-<footer class="footer">
-    <div class="footer-content">
-      <address>
-        123 Cocktail Lane, Storytown, ST 45678<br>
-        Email: <a href="mailto:info@liquidlibrary.com">info@liquidlibrary.com</a><br>
-        Phone: (123) 456-7890
-      </address>
-      <p>&copy; 2024 Liquid Library. All rights reserved.</p>
+    <div class="blue">
+      <div>
+        <h2 class="alt1">Signature Cocktails</h2>
+        <ol class="spaced-list">
+          <li>The Novel Twist</li>
+          <li>The Prohibition Punch</li>
+          <li>Chapter One</li>
+          <li>The Midnight Espresso</li>
+          <li>The Literary Sour</li>
+          <li>The Quiet Storm</li>
+          <li>The Fable</li>
+        </ol>
+      </div>
+      <div>
+        <h2 class="alt2">Classic Cocktails</h2>
+        <ol class="spaced-list">
+          <li>Old Fashioned</li>
+          <li>Negroni</li>
+          <li>Margarita</li>
+          <li>Mojito</li>
+          <li>Manhattan</li>
+          <li>Martini</li>
+        </ol>
+      </div>
+      <div>
+        <h2 class="alt3">Non-Alcoholic Creations</h2>
+        <ol class="spaced-list">
+          <li>The Quiet Page</li>
+          <li>The Citrus Chapter</li>
+          <li>The Lavender Garden</li>
+        </ol>
+      </div>
     </div>
-  </footer>
-<script src="script.js"></script>
-</body>
-</html>
+    <div class="blue">
+      <div>
+        <h2 class="alt1">Small Bites & Share Plates</h2>
+        <ol class="spaced-list">
+          <li>Charcuterie Board</li>
+          <li>Truffle Fries</li>
+          <li>Crispy Calamari</li>
+          <li>Roasted Brussel Sprouts</li>
+          <li>Grilled Flatbread</li>
+          <li>Spicy Tuna Tartare</li>
+          <li>Smoked Salmon Crostini</li>
+        </ol>
+      </div>
+      <div>
+        <h2 class="alt2">Sweet Endings</h2>
+        <ol class="spaced-list">
+          <li>Charcuterie Board</li>
+          <li>Truffle Fries</li>
+          <li>Crispy Calamari</li>
+          <li>Roasted Brussel Sprouts</li>
+          <li>Grilled Flatbread</li>
+          <li>Spicy Tuna Tartare</li>
+          <li>Smoked Salmon Crostini</li>
+        </ol>
+      </div>
+    </div>
 
+    <footer class="footer">
+      <div class="footer-content">
+        <address>
+          123 Cocktail Lane, Storytown, ST 45678<br />
+          Email:
+          <a href="mailto:info@liquidlibrary.com">info@liquidlibrary.com</a
+          ><br />
+          Phone: (123) 456-7890
+        </address>
+        <p>&copy; 2024 Liquid Library. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
