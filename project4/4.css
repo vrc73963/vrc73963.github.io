@@ -62,6 +62,40 @@ body {
     width: 25px;
     margin: 5px 0;
 }
+.footer {
+    background-color: #00D3FF;
+    color: #1E1E1E(0, 0, 0);
+    padding: 5px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
+  
+  .footer-content p {
+    margin: 5px 0;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
+  
+  .footer-content address {
+    font-style: normal;
+    margin-top: 10px;
+  }
+  
+  .footer-content a {
+    color: #FF0092;
+    text-decoration: none;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
 
 
 @media screen and (max-width: 768px) {
