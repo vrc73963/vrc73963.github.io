@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LIQUID LIBRARY | HOME</title>
+    <link rel="stylesheet" href="4.css" />
+    <link rel="javascript" href="script.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amarante&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        h1 {
+        color: #00d3ff;
+        padding: 1em;
+        font-family: "Aboreto", sans-serif;
+        font-size: 36px;
+      }
+      img {
+        border-radius: 20px;
+        padding: .7em;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1.2px solid #0041ff;
+        background-color: #2a2a2a;
+        
+      }
+      .alt1 {
+        padding: 1em;
+        color: #aeff00;
+        padding-left: 0;
+      }
+      .alt2 {
+        padding: 1em;
+        color: #ff7300;
+        padding-left: 0;
+      }
+      ul{
+        padding: .2em;
+      }
+      .image-section {
+        padding: 30px;
+        flex: 1;
+        max-width: 50%;
+      }
+      .image-section img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .text-section {
+        flex: 1;
+        padding: 45px;
+        background-color: transparent;
+        color: white;
+      }
+
+      @media screen and (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .image-section,
+        .text-section {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div id="logo">
+        <img
+          src="images/LIQUID LIBRARY_11.png"
+          alt="Brand Logo"
+          class="logo-img"
+        />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="story.html">Story</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="Recipes.html">Recipes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+    <h1>Quick Recipes</h1>
+    <div class="container">
+        
+      <div class="image-section">
+        <img src="https://placehold.co/600x400" alt="Novel Twist Cocktail" />
+      </div>
+      <div class="text-section">
+        <h2 class="alt1">1. The Novel Twist</h2>
+
+        <ul>
+          <li>1.5 oz Gin</li>
+          <li>0.5 oz Elderflower liqueur</li>
+          <li>Fresh cucumber slices</li>
+          <li>Fresh mint leaves</li>
+          <li>Top with tonic water</li>
+        </ul>
+        <p>Instructions:</p>
+        <p>
+          Muddle cucumber and mint in a glass. Add gin and elderflower liqueur,
+          then fill with ice. Top with tonic water and garnish with a cucumber
+          slice and mint sprig.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="image-section">
+        <img src="https://placehold.co/600x400" alt="Literary Sour Cocktail" />
+      </div>
+      <div class="text-section">
+        <h2 class="alt2">2. The Literary Sour</h2>
+        <ul>
+          <li>2 oz Bourbon</li>
+          <li>0.75 oz Fresh lemon juice</li>
+          <li>0.5 oz Raspberry syrup</li>
+          <li>Egg white (optional)</li>
+          <li>Fresh raspberries for garnish</li>
+        </ul>
+        <p>Instructions:</p>
+        <p>
+          Shake bourbon, lemon juice, raspberry syrup, and egg white (if using)
+          with ice. Strain into a glass and garnish with fresh raspberries.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <address>
+          123 Cocktail Lane, Storytown, ST 45678<br />
+          Email:
+          <a href="mailto:info@liquidlibrary.com">info@liquidlibrary.com</a
+          ><br />
+          Phone: (123) 456-7890
+        </address>
+        <p>&copy; 2024 Liquid Library. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

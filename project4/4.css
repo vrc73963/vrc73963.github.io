@@ -70,7 +70,6 @@ img
     color: #1E1E1E(0, 0, 0);
     padding: 5px;
     text-align: center;
-    font-family: Arial, sans-serif;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -79,7 +78,7 @@ img
   }
   
   .footer-content p {
-    margin: 5px 0;
+    margin: 10px 0;
     text-align: center;
     color: #ffffff;
     font-family: "Inter", sans-serif;
