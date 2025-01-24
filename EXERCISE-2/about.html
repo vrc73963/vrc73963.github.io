@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript let exercise</title>
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+    <p id="message">
+      TYPE YOUR NAME AND CLICK ON THE BUTTON TO SEE SOMETHING COOL!
+    </p>
+    <input type="text" id="nameInput" placeholder="enter your name" />
+    <button onclick="sayhello()">Submit</button>
+    <script>
+      function sayhello() {
+        let name = document.getElementById("nameInput").value;
+        document.getElementById("message").textContent =
+          "hello," + name + "! Welcome to javascript!";
+      }
+    </script>
+  </body>
+</html>
