@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>exercise 4</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        color: rgb(28, 114, 85);
+        padding: 40px;
+      }
+      #colorList {
+        margin-top: 20px;
+      }
+      .color-item {
+        padding: 5px;
+        margin: 5px 0;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+    <link rel="javascript" href="exercise4/script.js" />
+  </head>
+  <body>
+    <h1>Age Checker and Color List</h1>
+
+    <label for="ageInput">Enter your age: </label>
+    <input type="number" id="ageInput" placeholder="Your age" />
+    <button onclick="checkAge()">Check Age and Colors</button>
+
+    <p id="ageMessage"></p>
+    <div id="colorList"></div>
+    <script>
+        function checkAge() {
+            
+            let age = parseInt(document.getElementById("ageInput").value);
+            
+           
+            let ageMessage;
+            if (age < 18) {
+                ageMessage = "You are a minor.";
+            } else if (age >= 18 & age <= 64) {
+                ageMessage = "You are an adult.";
+            } else {
+                ageMessage = "You are a senior.";
+            }
+            
+
+            
+            document.getElementById("ageMessage").innerHTML = ageMessage;
+
+            
+            let colors = [];
+ if (age < 18) {
+     colors = ["Red", "Yellow" ];
+ } 
+ if (age > 18) {
+     colors = ["Blue" ,"Pink"];
+ }
+ if (age > 64) {
+     colors = ["Green", "Orange"];
+ }
+
+            
+            let colorList = "<ul>";
+            for (let i = 0; i < colors.length; i++) {
+                colorList += "<li>" + colors[i] + "</li>";
+            }
+            colorList += "</ul>";
+
+            
+            document.getElementById("colorList").innerHTML = colorList;
+        }
+   </script>
+  </body>
+</html>
