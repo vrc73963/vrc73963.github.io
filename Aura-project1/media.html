@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+  
+        body {
+          font-family: "Maven Pro", serif;
+          font-optical-sizing: auto;
+          font-weight: 400;
+          font-style: normal;
+          background-color: #000000;
+          padding: 2.2em;
+          
+        }
+        .header {
+            background: #D67200;
+            padding: 5px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            
+        }
+
+        .logo {
+            width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            padding: 2em;
+        }
+
+        .logo a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: bold;
+           
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .post {
+            background: #11004E;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-header {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #D67200;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            margin-right: 10px;
+        }
+
+        .user-info {
+            flex: 1;
+        }
+
+        .username {
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .post-time {
+            font-size: 12px;
+            color: #969696;
+        }
+
+        .post-content {
+            display: flex;
+            flex-direction: row;
+            padding: 15px;
+        }
+
+        .post-text {
+            flex: 1;
+            padding-right: 15px;
+        }
+
+        .post-image {
+            width: 200px;
+            height: 200px;
+            background-color: #5f677d;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .post-actions {
+            padding: 10px 15px;
+            border-top: 1px solid #e4e6eb;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .action-button {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            background: none;
+            border: none;
+            color: #65676b;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .action-button:hover {
+            background-color: #f0f2f5;
+            border-radius: 4px;
+        }
+
+        .action-button i {
+            margin-right: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .post-content {
+                flex-direction: column;
+            }
+
+            .post-image {
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            .post-text {
+                padding-right: 0;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="logo"><img src="images/AURA_2.png" alt="Aura logo" /></div>
+    </div>
+    
+
+    <header class="header">
+       
+    <div class="container">
+        <!--  --></header>
+        <div class="post">
+            <div class="post-header">
+                <div class="profile-pic">
+                    <img src="/api/placeholder/40/40" alt="Profile 1">
+                </div>
+                <div class="user-info">
+                    <a href="#" class="username">John Doe</a>
+                    <div class="post-time">2 hours ago</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <div class="post-text">
+                    <p>Just had an amazing adventure in the mountains! The view was breathtaking and the experience was unforgettable. #Adventure #Nature #Mountains</p>
+                </div>
+                <div class="post-image">
+                    <img src="/api/placeholder/200/200" alt="Post image 1">
+                </div>
+            </div>
+            <div class="post-actions">
+                <a href="#" class="action-button">
+                    <i class="fas fa-thumbs-up"></i>Like
+                </a>
+                <a href="#" class="action-button">
+                    <i class="fas fa-comment"></i>Comment
+                </a>
+                <a href="#" class="action-button">
+                    <i class="fas fa-share"></i>Share
+                </a>
+            </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post">
+            <div class="post-header">
+                <div class="profile-pic">
+                    <img src="/api/placeholder/40/40" alt="Profile 2">
+                </div>
+                <div class="user-info">
+                    <a href="#" class="username">Jane Smith</a>
+                    <div class="post-time">4 hours ago</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <div class="post-text">
+                    <p>Trying out this new recipe today! Can't wait to share the results with everyone. #Cooking #FoodLover</p>
+                </div>
+                <div class="post-image">
+                    <img src="/api/placeholder/200/200" alt="Post image 2">
+                </div>
+            </div>
+            <div class="post-actions">
+                <a href="#" class="action-button">
+                    <i class="fas fa-thumbs-up"></i>Like
+                </a>
+                <a href="#" class="action-button">
+                    <i class="fas fa-comment"></i>Comment
+                </a>
+                <a href="#" class="action-button">
+                    <i class="fas fa-share"></i>Share
+                </a>
+            </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="post">
+            <div class="post-header">
+                <div class="profile-pic">
+                    <img src="/api/placeholder/40/40" alt="Profile 3">
+                </div>
+                <div class="user-info">
+                    <a href="#" class="username">Mike Johnson</a>
+                    <div class="post-time">6 hours ago</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <div class="post-text">
+                    <p>Just finished my latest art project! What do you think? #Art #Creative #Design</p>
+                </div>
+                <div class="post-image">
+                    <img src="/api/placeholder/200/200" alt="Post image 3">
+                </div>
+            </div>
+            <div class="post-actions">
+                <a href="#" class="action-button">
+                    <i class="fas fa-thumbs-up"></i>Like
+                </a>
+                <a href="#" class="action-button">
+                    <i class="fas fa-comment"></i>Comment
+                </a>
+                <a href="#" class="action-button">
+                    <i class="fas fa-share"></i>Share
+                </a>
+            </div>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="post">
+            <div class="post-header">
+                <div class="profile-pic">
+                    <img src="/api/placeholder/40/40" alt="Profile 4">
+                </div>
+                <div class="user-info">
+                    <a href="#" class="username">Sarah Wilson</a>
+                    <div class="post-time">8 hours ago</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <div class="post-text">
+                    <p>Beautiful sunset at the beach today! Perfect end to a perfect day. #Sunset #Beach #Peace</p>
+                </div>
+                <div class="post-image">
+                    <img src="/api/placeholder/200/200" alt="Post image 4">
+                </div>
+            </div>
+            <div class="post-actions">
+                <a href="#" class="action-button">
+                    <i class="fas fa-thumbs-up"></i>Like
+                </a>
+                <a href="#" class="action-button">
+                    <i class="fas fa-comment"></i>Comment
+                </a>
+                <a href="#" class="action-button">
+                    <i class="fas fa-share"></i>Share
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
