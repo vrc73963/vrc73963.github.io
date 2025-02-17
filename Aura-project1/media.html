@@ -33,6 +33,8 @@
             position: sticky;
             top: 0;
             z-index: 100;
+           
+            
             
         }
 
@@ -173,6 +175,7 @@
             background: none;
             border: none;
             cursor: pointer;
+            
         }
 
         .nav-links {
@@ -197,11 +200,30 @@
         .nav-links a:hover {
             color: #D67200;
         }
+       
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      transition: all 0.3s ease;
+    }
+
 
         @media (max-width: 600px)
          {
             .menu-toggle {
                 display: block;
+                
             }
 
             .nav-links {
@@ -231,7 +253,40 @@
             .post-text {
                 padding-right: 0;
             }
-        }
+            .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #333;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      /* Hamburger animation classes */
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
+        
         </style>
 </head>
 <body>
@@ -242,6 +297,16 @@
     
 
     <header class="header"></header>
+    <nav>
+        <div class="nav-container">
+          
+          <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+    </nav>
        
     <div class="container">
         <!--  -->
@@ -374,11 +439,8 @@
             </div>
             
         </div>
-        <nav class="navbar">
-        
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
+        <nav class="nav-container">
+            
             <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="media.html">Media</a>
@@ -396,6 +458,21 @@
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
+
+        const hamburger = document.querySelector('.hamburger');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
+    });
     </script>
     
 </body>
