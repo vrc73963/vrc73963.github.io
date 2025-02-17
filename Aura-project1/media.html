@@ -221,6 +221,9 @@
 
         @media (max-width: 600px)
          {
+            .header{
+                display: none;
+            }
             .menu-toggle {
                 display: block;
                 
@@ -263,7 +266,7 @@
         position: absolute;
         top: 70px;
         left: 0;
-        background-color: #333;
+        background-color: #11004E;
         flex-direction: column;
         padding: 1rem;
         gap: 1rem;
@@ -454,25 +457,27 @@
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
+        const hamburger = document.querySelector('.hamburger');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+  }
+});
 
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            
         });
 
-        const hamburger = document.querySelector('.hamburger');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('active');
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('active');
-      }
-    });
+       
     </script>
     
 </body>
