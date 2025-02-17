@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aura | Media</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,7 +29,7 @@
         .header {
             background: #D67200;
             padding: 4px 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -55,14 +55,14 @@
 
         .container {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 5px auto;
             padding: 0 15px;
         }
 
         .post {
             background: #11004E;
             border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1);
             margin-bottom: 20px;
             overflow: hidden;
             display: flex;
@@ -108,6 +108,7 @@
         .post-text {
             flex: 1;
             padding-right: 15px;
+            color: #ffffff;
         }
 
         .post-image {
@@ -175,8 +176,10 @@
         }
 
         .nav-links {
+            position: relative;
             display: flex;
-            gap: 20px;
+            gap: 40px;
+            
             
         }
 
@@ -187,8 +190,8 @@
             border-radius: 4px;
             align-items: center;
             font-size: 20px;
-            font-weight: 500;
-            
+            font-weight:600;
+            align-content: center; 
         }
 
         .nav-links a:hover {
@@ -238,23 +241,23 @@
     
     
 
-    <header class="header">
+    <header class="header"></header>
        
     <div class="container">
-        <!--  --></header>
+        <!--  -->
         <div class="post">
             <div class="post-header">
                 <div class="profile-pic">
                     <img src="/api/placeholder/40/40" alt="Profile 1">
                 </div>
                 <div class="user-info">
-                    <a href="#" class="username">John Doe</a>
+                    <a href="#" class="username">Coastal Captures</a>
                     <div class="post-time">2 hours ago</div>
                 </div>
             </div>
             <div class="post-content">
                 <div class="post-text">
-                    <p>Just had an amazing adventure in the mountains! The view was breathtaking and the experience was unforgettable. #Adventure #Nature #Mountains</p>
+                    <p> "Golden hour magic at the cliffs.  The light was absolutely unreal! #landscapephotography #goldenhour </p>
                 </div>
                 <div class="post-image">
                     <img src="https://placehold.co/350x250" alt="Post image 1">
@@ -280,13 +283,13 @@
                     <img src="/api/placeholder/40/40" alt="Profile 2">
                 </div>
                 <div class="user-info">
-                    <a href="#" class="username">Jane Smith</a>
+                    <a href="#" class="username">Urban Lens</a>
                     <div class="post-time">4 hours ago</div>
                 </div>
             </div>
             <div class="post-content">
                 <div class="post-text">
-                    <p>Trying out this new recipe today! Can't wait to share the results with everyone. #Cooking #FoodLover</p>
+                    <p>"Exploring the hidden alleyways of the city.  Street photography is my passion. #streetphotography #citylife #urbanexploration #blackandwhitephotography"</p>
                 </div>
                 <div class="post-image">
                     <img src="https://placehold.co/350x250" alt="Post image 2">
@@ -312,13 +315,13 @@
                     <img src="/api/placeholder/40/40" alt="Profile 3">
                 </div>
                 <div class="user-info">
-                    <a href="#" class="username">Mike Johnson</a>
+                    <a href="#" class="username">Emily Carter</a>
                     <div class="post-time">6 hours ago</div>
                 </div>
             </div>
             <div class="post-content">
                 <div class="post-text">
-                    <p>Just finished my latest art project! What do you think? #Art #Creative #Design</p>
+                    <p> "A curious little fox I encountered on my hike this morning.  Nature is full of surprises! #wildlifephotography #fox #nature #animals #cute"</p>
                 </div>
                 <div class="post-image">
                     <img src="https://placehold.co/350x250" alt="Post image 3">
@@ -344,13 +347,13 @@
                     <img src="/api/placeholder/40/40" alt="Profile 4">
                 </div>
                 <div class="user-info">
-                    <a href="#" class="username">Sarah Wilson</a>
+                    <a href="#" class="username">Javier Rodriguez</a>
                     <div class="post-time">8 hours ago</div>
                 </div>
             </div>
             <div class="post-content">
                 <div class="post-text">
-                    <p>Beautiful sunset at the beach today! Perfect end to a perfect day. #Sunset #Beach #Peace</p>
+                    <p>"Playing with light and shadows.  Sometimes the simplest things create the most interesting patterns. #abstractphotography #lightandshadow </p>
                 </div>
                 <div class="post-image">
                     <img src="https://placehold.co/350x250" alt="Post image 4">
@@ -366,21 +369,26 @@
                 <a href="#" class="action-button">
                     <i class="fas fa-share"></i>Share
                 </a>
+
+                
             </div>
+            
         </div>
-    </div>
-    <nav class="navbar">
+        <nav class="navbar">
         
-        <button class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="nav-links" id="navLinks">
-            <a href="index.html">Home</a>
-            <a href="#">Profile</a>
-            <a href="#">Messages</a>
-            <a href="#">Settings</a>
-        </div>
-    </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="media.html">Media</a>
+                <a href="explore.html">Explore</a>
+                <a href="profile.html">Profile</a>
+                <a href="comments.html">Comments</a>
+            </div>
+        </nav>
+    </div>
+ 
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');

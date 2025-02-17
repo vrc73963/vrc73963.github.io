@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | Explore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+  
+        body {
+          font-family: "Maven Pro", serif;
+          font-optical-sizing: auto;
+          font-weight: 400;
+          font-style: normal;
+          background-color: #000000;
+          padding: 2.2em;
+          
+        }
+        .header {
+            background: #D67200;
+            padding: 4px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            
+        }
+        .logo {
+            width: 120px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            padding: 2em;
+        }
+
+        .logo a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: bold;
+           
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+            color: rgb(255, 255, 255);
+            
+        }
+        
+
+    .header h1 {
+      font-size: 32px;
+      color: #ffffff;
+      font-weight: 600;
+    }
+    #tp{
+        padding-bottom: 40px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 0 10px;
+      padding-bottom: 20px;
+    }
+
+    .image-card {
+      position: relative;
+      border-radius: 2px;
+      overflow: hidden;
+      background: rgb(0, 0, 0);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .image-placeholder {
+      width: 100%;
+      padding-bottom: 100%; /* Creates a square aspect ratio */
+      background-color: #ffffff;
+      position: relative;
+    }
+
+    .image-info {
+      padding: 15px;
+    }
+
+    .image-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #ffffff;
+      margin-bottom: 5px;
+    }
+
+    .image-description {
+      font-size: 14px;
+      color: #8e8e8e;
+    }
+
+        .navbar {
+            background: #000000;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-links {
+           position: relative;
+            display: flex;
+            gap: 40px;
+            
+           
+            
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            align-items: center;
+            font-size: 20px;
+            font-weight:600;
+            align-content: center;
+        }
+
+        .nav-links a:hover {
+            color: #D67200;
+        }
+
+        @media (max-width: 768px)
+         {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 16px;
+                box-shadow: 0 2px 4px rgba(175, 67, 67, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+            .header h1 {
+        font-size: 24px;
+      }
+
+      .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header {
+        margin-bottom: 20px;
+      }
+        }
+        </style>
+        </head>
+        <body>
+            
+            <div class="logo"><img src="images/AURA_2.png" alt="Aura logo" /></div>
+            </div>
+            
+            
+        
+            <header class="header"></header>
+               
+            <div class="container">
+                
+                    
+                      <h1 id="tp">Trending Posts</h1>
+                    
+                
+                    <div class="image-grid">
+                      <!-- Image Card 1 -->
+                      <div class="image-card">
+                        <img src="https://placecats.com/484/320" alt="image1">
+                        <div class="image-info">
+                          <h3 class="image-title">Post Title 1</h3>  
+                        </div>
+                      </div>
+                
+                      <!-- Image Card 2 -->
+                      <div class="image-card">
+                        <img src="https://placecats.com/484/320" alt="image1">
+                        <div class="image-info">
+                          <h3 class="image-title">Post Title 1</h3>  
+                        </div>
+                      </div>
+                
+                      <!-- Image Card 3 -->
+                      <div class="image-card">
+                        <img src="https://placecats.com/484/320" alt="image1">
+                        <div class="image-info">
+                          <h3 class="image-title">Post Title 1</h3>  
+                        </div>
+                      </div>
+                
+                      <!-- Image Card 4 -->
+                      <div class="image-card">
+                        <img src="https://placecats.com/484/320" alt="image1">
+                        <div class="image-info">
+                          <h3 class="image-title">Post Title 1</h3>  
+                        </div>
+                      </div>
+                
+                      <!-- Image Card 5 -->
+                      <div class="image-card">
+                        <img src="https://placecats.com/484/320" alt="image1">
+                        <div class="image-info">
+                          <h3 class="image-title">Post Title 1</h3>  
+                        </div>
+                      </div>
+                
+                      <!-- Image Card 6 -->
+                      <div class="image-card">
+                        <img src="https://placecats.com/484/320" alt="image1">
+                        <div class="image-info">
+                          <h3 class="image-title">Post Title 1</h3>  
+                        </div>
+                      </div>
+                
+                      <!-- Image Card 7 -->
+                      <div class="image-card">
+                        <img src="https://placecats.com/484/320" alt="image1">
+                        <div class="image-info">
+                          <h3 class="image-title">Post Title 1</h3>  
+                        </div>
+                      </div>
+                
+                      <!-- Image Card 8 -->
+                      <div class="image-card">
+                        <img src="https://placecats.com/484/320" alt="image1">
+                        <div class="image-info">
+                          <h3 class="image-title">Post Title 1</h3>  
+                        </div>
+                      </div>
+                    </div>
+                  
+                
+                <nav class="navbar">
+        
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="nav-links" id="navLinks">
+                        <a href="index.html">Home</a>
+                        <a href="media.html">Media</a>
+                        <a href="explore.html">Explore</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="comments.html">Comments</a>
+                    </div>
+                </nav>
+        </div>
+ 
+                <script>
+                    const menuToggle = document.getElementById('menuToggle');
+                    const navLinks = document.getElementById('navLinks');
+            
+                    menuToggle.addEventListener('click', () => {
+                        navLinks.classList.toggle('active');
+                    });
+                </script>
+                
+            </body>
+            </html>
+                
