@@ -57,6 +57,103 @@
             margin: 20px auto;
             padding: 0 15px;
         }
+        .post {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .post-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .post-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .post-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .caption {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .comment-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            resize: none;
+        }
+
+        .comments-section {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .comment {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .comment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .comment-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .comment-username {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .comment-time {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .comment-text {
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .comment-actions {
+            display: flex;
+            gap: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .action-btn {
+            border: none;
+            background: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #666;
+        }
+
+        .action-btn:hover {
+            color: #333;
+        }
         .navbar {
             background: #000000;
             padding: 1rem;
@@ -117,6 +214,7 @@
       background-color: white;
       transition: all 0.3s ease;
     }
+    
 
         @media (max-width: 600px)
          {
@@ -134,6 +232,13 @@
                 flex-direction: column;
                 padding: 16px;
                 box-shadow: 0 2px 4px rgba(175, 67, 67, 0.1);
+            }
+            .post {
+                flex-direction: column;
+            }
+            
+            .post-image, .post-content {
+                min-width: 100%;
             }
 
             .nav-links.active {
@@ -177,7 +282,60 @@
         
             <header class="header"></header>
                
-            <div class="container">
+              <div class="container">
+                <div class="post">
+                    <div class="post-image">
+                        <img src="images/cliff-1839392.jpg" alt="Post image">
+                    </div>
+                    <div class="post-content">
+                        <p class="caption">
+                            Beautiful sunset at the beach! The colors were absolutely incredible today. 
+                            Nature never fails to amaze me. #sunset #beach #nature #photography
+                        </p>
+                        
+                        <textarea class="comment-input" placeholder="Add your comment here..." rows="3"></textarea>
+        
+                        <div class="comments-section">
+                            <div class="comment">
+                                <div class="comment-header">
+                                    <img src="images/cliff-1839392.jpg" alt="" class="comment-avatar">
+                                    <span class="comment-username">Sarah_Smith</span>
+                                    <span class="comment-time">2h ago</span>
+                                </div>
+                                <p class="comment-text">This is absolutely stunning! The colors are magical 😍</p>
+                                <div class="comment-actions">
+                                    <button class="action-btn">
+                                        <i class="fas fa-heart"></i>
+                                        <span>24</span>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-thumbs-down"></i>
+                                        <span>2</span>
+                                    </button>
+                                    <button class="action-btn">Reply</button>
+                                </div>
+                              </div>
+                              <div class="comment">
+                                <div class="comment-header">
+                                    <img src="/api/placeholder/32/32" alt="user avatar" class="comment-avatar">
+                                    <span class="comment-username">PhotoLover</span>
+                                    <span class="comment-time">1h ago</span>
+                                </div>
+                                <p class="comment-text">What camera settings did you use? The detail is incredible!</p>
+                                <div class="comment-actions">
+                                    <button class="action-btn">
+                                        <i class="fas fa-heart"></i>
+                                        <span>15</span>
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-thumbs-down"></i>
+                                        <span>0</span>
+                                    </button>
+                                    <button class="action-btn">Reply</button>
+                                </div>
+                            </div>
+
+                            
                 
                 <nav class="navbar">
         
@@ -192,7 +350,7 @@
                         <a href="comments.html">Comments</a>
                     </div>
                 </nav>
-        </div>
+       
  
         <script>
             const menuToggle = document.getElementById('menuToggle');

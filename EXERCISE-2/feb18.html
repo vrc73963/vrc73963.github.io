@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event registration</title>
+    <style>
+        button{
+            padding: 10px, 20px;
+            background-color: aquamarine;
+            color: rgb(255, 255, 255);
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background: #218838;
+        }
+        .event{
+            padding: 20px;
+            margin: 20px;
+            background: #f4f4f4;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Event Registration</h1></header>
+    <div class="event">
+<h2> Music concert 2025</h2>
+<button id="registerButton"> Register now</button>
+<P id="confirmation"></P>
+    </div>
+    <script>
+        function registerEvent(eventName, confirmationid){
+            document.getElementById(confirmationid).innerText = 'You are registered for the${eventName}!'
+        }
+
+    </script>
+    
+</body>
+</html>

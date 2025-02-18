@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple math</title>
+</head>
+<body>
+    <h1>Math Operator</h1>
+    <button id="addButton">Add numbers</button>
+    <div id="result"></div>
+
+    <script>
+function addNumbers(num1,num2){
+    return num1 + num2;
+}
+
+document.getElementById("addButton").addEventListener("click", function(){
+    let result = addNumbers (5,3);
+    document.getElementById("result").innerHTML = result;
+});
+
+    </script>
+    
+</body>
+</html>
