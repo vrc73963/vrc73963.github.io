@@ -101,6 +101,22 @@
         .nav-links a:hover {
             color: #D67200;
         }
+        .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      transition: all 0.3s ease;
+    }
 
         @media (max-width: 600px)
          {
@@ -114,7 +130,7 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: white;
+                background: #11004E;
                 flex-direction: column;
                 padding: 16px;
                 box-shadow: 0 2px 4px rgba(175, 67, 67, 0.1);
@@ -123,10 +139,36 @@
             .nav-links.active {
                 display: flex;
             }
+            /* Hamburger animation classes */
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+            .hamburger {
+        display: flex;
+      }
         }
         </style>
         </head>
         <body>
+            <nav>
+                <div class="nav-container">
+                  
+                  <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                </div>
+            </nav>
+            
             
             <div class="logo"><img src="images/AURA_2.png" alt="Aura logo" /></div>
             </div>
@@ -152,14 +194,31 @@
                 </nav>
         </div>
  
-                <script>
-                    const menuToggle = document.getElementById('menuToggle');
-                    const navLinks = document.getElementById('navLinks');
-            
-                    menuToggle.addEventListener('click', () => {
-                        navLinks.classList.toggle('active');
-                    });
-                </script>
+        <script>
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
+    });
+    
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                
+            });
+    
+           
+        </script>
                 
             </body>
             </html>

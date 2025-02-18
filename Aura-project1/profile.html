@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <style>
+        
         * {
           margin: 0;
           padding: 0;
@@ -26,6 +27,101 @@
           padding: 2.2em;
           
         }
+        .profile-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            background-color: #FF2F00(199, 122, 122);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        } 
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        p{
+            color: #ffffff;
+        }
+
+        .stats-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 15px;
+        }
+
+        .stat-box {
+            background-color: #000000;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: #D67200;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .posts-grid {
+            margin-top: 20px;
+            font-weight: 500;
+            color: #D67200;
+            display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 0 10px;
+      padding-bottom: 20px;
+        }
+
+        .post {
+            position: relative;
+      border-radius: 2px;
+      overflow: hidden;
+      background: rgb(0, 0, 0);
+      transition: transform 0.3s ease;
+            
+            
+        }
+
+        .post-image {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-color: #c3b1b1;
+            object-fit: cover;
+            
+        }
+
+        
+
         .header {
             background: #D67200;
             padding: 4px 20px;
@@ -101,6 +197,22 @@
         .nav-links a:hover {
             color: #D67200;
         }
+        .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      transition: all 0.3s ease;
+    }
 
         @media (max-width: 600px)
          {
@@ -114,7 +226,7 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: white;
+                background: #11004E;
                 flex-direction: column;
                 padding: 16px;
                 box-shadow: 0 2px 4px rgba(175, 67, 67, 0.1);
@@ -123,10 +235,60 @@
             .nav-links.active {
                 display: flex;
             }
+            /* Hamburger animation classes */
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+            .hamburger {
+        display: flex;
+      }
+      .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .stats-container {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .posts-grid {
+                grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        display: block;
+            }
+
+            .post-image {
+                height: 250px;
+            }
         }
+        @media (max-width: 480px) {
+            .posts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
         </style>
         </head>
         <body>
+            <nav>
+                <div class="nav-container">
+                  
+                  <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                </div>
+            </nav>
+            
             
             <div class="logo"><img src="images/AURA_2.png" alt="Aura logo" /></div>
             </div>
@@ -136,6 +298,56 @@
             <header class="header"></header>
                
             <div class="container">
+
+
+                <div class="profile-container">
+                    <!-- Profile Header -->
+                    <div class="profile-header">
+                        <img src="https://placecats.com/150/150" alt="Profile Picture" class="profile-picture">
+                        <div class="profile-info">
+                            <h1 class="profile-name">Viraj Champaneri</h1>
+                            <p>I like to capture photos of wildlife and mountains.</p>
+                            <div class="stats-container">
+                               
+                                <div class="stat-box">
+                                    <div class="stat-number">+999</div>
+                                    <div class="stat-label">Aura Points</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-number">786</div>
+                                    <div class="stat-label">Following</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                   
+                    <div class="posts-grid">
+                        <p>Your Posts</p>
+                        <!-- Post 1 -->
+                        <div class="post">
+                            <img src="images/pp/pexels-frans-van-heerden-201846-802112.jpg" alt="Post 1" class="post-image">
+                            
+                        </div>
+                        <div class="post">
+                            <img src="images/pp/pexels-lastly-418626.jpg" alt="Post 1" class="post-image">
+                            
+                        </div>
+                        <div class="post">
+                            <img src="images/pp/pexels-pixabay-219906.jpg" alt="Post 1" class="post-image">
+                            
+                        </div>
+                        
+                    
+                    </div>
+                </div>
+                        
+
+                        
+            
+                        
+            
                 
                 <nav class="navbar">
         
@@ -152,14 +364,31 @@
                 </nav>
         </div>
  
-                <script>
-                    const menuToggle = document.getElementById('menuToggle');
-                    const navLinks = document.getElementById('navLinks');
-            
-                    menuToggle.addEventListener('click', () => {
-                        navLinks.classList.toggle('active');
-                    });
-                </script>
+        <script>
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
+    });
+    
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                
+            });
+    
+           
+        </script>
                 
             </body>
             </html>

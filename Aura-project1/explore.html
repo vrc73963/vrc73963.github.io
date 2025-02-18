@@ -85,6 +85,7 @@
       background: rgb(0, 0, 0);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
+      height: 300px;
     }
 
     .image-card:hover {
@@ -159,24 +160,80 @@
             color: #D67200;
         }
 
-        @media (max-width: 768px)
+        .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      transition: all 0.3s ease;
+    }
+    .search-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .search-form {
+            display: flex;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 25px 0 0 25px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: #4CAF50;
+        }
+
+        .search-button {
+            padding: 12px 24px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 0 25px 25px 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #000000;
+        }
+
+        @media (max-width: 600px)
          {
             .menu-toggle {
                 display: block;
             }
 
             .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 16px;
-                box-shadow: 0 2px 4px rgba(175, 67, 67, 0.1);
-            }
-
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #11004E;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+      }
             .nav-links.active {
                 display: flex;
             }
@@ -188,6 +245,22 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
         display: block;
+      }
+      
+       /* Hamburger animation classes */
+       .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+            .hamburger {
+        display: flex;
       }
     }
 
@@ -203,6 +276,17 @@
         </style>
         </head>
         <body>
+          <nav>
+            <div class="nav-container">
+              
+              <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+        </nav>
+        
             
             <div class="logo"><img src="images/AURA_2.png" alt="Aura logo" /></div>
             </div>
@@ -220,67 +304,80 @@
                     <div class="image-grid">
                       <!-- Image Card 1 -->
                       <div class="image-card">
-                        <img src="https://placecats.com/484/320" alt="image1">
+                        <img src="images/EXPLORE/man-7768120.jpg" alt="image1">
                         <div class="image-info">
-                          <h3 class="image-title">Post Title 1</h3>  
+                          <h3 class="image-title"></h3>  
                         </div>
                       </div>
                 
                       <!-- Image Card 2 -->
                       <div class="image-card">
-                        <img src="https://placecats.com/484/320" alt="image1">
+                        <img src="images/EXPLORE/mountains-7292778_1280.jpg" alt="image1">
                         <div class="image-info">
-                          <h3 class="image-title">Post Title 1</h3>  
+                          <h3 class="image-title"></h3>  
                         </div>
                       </div>
                 
                       <!-- Image Card 3 -->
                       <div class="image-card">
-                        <img src="https://placecats.com/484/320" alt="image1">
+                        <img src="images/EXPLORE/ocean-5003864_1280.jpg" alt="image1">
                         <div class="image-info">
-                          <h3 class="image-title">Post Title 1</h3>  
+                          <h3 class="image-title"></h3>  
                         </div>
                       </div>
                 
                       <!-- Image Card 4 -->
                       <div class="image-card">
-                        <img src="https://placecats.com/484/320" alt="image1">
+                        <img src="images/EXPLORE/pexels-alexisricardoalaurin-30521660.jpg" alt="image1">
                         <div class="image-info">
-                          <h3 class="image-title">Post Title 1</h3>  
+                          <h3 class="image-title"></h3>  
                         </div>
                       </div>
                 
                       <!-- Image Card 5 -->
                       <div class="image-card">
-                        <img src="https://placecats.com/484/320" alt="image1">
+                        <img src="images/EXPLORE/pexels-allegra-garbarini-2147514850-30282718.jpg" alt="image1">
                         <div class="image-info">
-                          <h3 class="image-title">Post Title 1</h3>  
+                          <h3 class="image-title"></h3>  
                         </div>
                       </div>
                 
                       <!-- Image Card 6 -->
                       <div class="image-card">
-                        <img src="https://placecats.com/484/320" alt="image1">
+                        <img src="images/EXPLORE/pexels-nika-ronni-2148915062-30338194.jpg" alt="image1">
                         <div class="image-info">
-                          <h3 class="image-title">Post Title 1</h3>  
+                          <h3 class="image-title"></h3>  
                         </div>
                       </div>
                 
                       <!-- Image Card 7 -->
                       <div class="image-card">
-                        <img src="https://placecats.com/484/320" alt="image1">
+                        <img src="images/EXPLORE/pexels-sincegameon-24860818.jpg" alt="image1">
                         <div class="image-info">
-                          <h3 class="image-title">Post Title 1</h3>  
+                          <h3 class="image-title"></h3>  
                         </div>
                       </div>
                 
                       <!-- Image Card 8 -->
                       <div class="image-card">
-                        <img src="https://placecats.com/484/320" alt="image1">
+                        <img src="images/EXPLORE/pexels-alexisricardoalaurin-30521660.jpg" alt="image1">
                         <div class="image-info">
-                          <h3 class="image-title">Post Title 1</h3>  
+                          <h3 class="image-title"></h3>  
                         </div>
                       </div>
+
+                      <div class="search-container">
+                        <form class="search-form" action="/search" method="GET">
+                            <input 
+                                type="text" 
+                                class="search-input" 
+                                placeholder="Search..." 
+                                name="q"
+                                required
+                            >
+                            <button type="submit" class="search-button">&#x1F50D</button>
+                        </form>
+                    </div>
                     </div>
                   
                 
@@ -299,15 +396,31 @@
                 </nav>
         </div>
  
-                <script>
-                    const menuToggle = document.getElementById('menuToggle');
-                    const navLinks = document.getElementById('navLinks');
-            
-                    menuToggle.addEventListener('click', () => {
-                        navLinks.classList.toggle('active');
-                    });
-                </script>
-                
+        <script>
+          const menuToggle = document.getElementById('menuToggle');
+          const navLinks = document.getElementById('navLinks');
+          const hamburger = document.querySelector('.hamburger');
+  
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    }
+  });
+  
+          menuToggle.addEventListener('click', () => {
+              navLinks.classList.toggle('active');
+              
+          });
+  
+         
+      </script>
             </body>
             </html>
                 
