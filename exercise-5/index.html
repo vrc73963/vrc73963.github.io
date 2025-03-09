@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 5 - Funtions and Event handling</title>
+    <link rel="stylesheet" href="script.js" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #383838;
+      }
+
+      .calculator {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      input {
+        padding: 8px;
+        margin: 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 100px;
+      }
+
+      button {
+        padding: 8px 20px;
+        background-color: #0b3c0d;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 10px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      #result {
+        font-size: 24px;
+        margin: 20px 0;
+        color: #333;
+      }
+
+      .error {
+        color: red;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <h2>Division</h2>
+      <div>
+        <input type="number" id="num1" placeholder="Enter number" />
+        <span>/</span>
+        <input type="number" id="num2" placeholder="Enter number" />
+      </div>
+      <button onclick="divide()">Add numbers</button>
+      <div id="result">Result:</div>
+      <div id="error" class="error"></div>
+    </div>
+
+    <script>
+      function divide() {
+        const num1 = parseFloat(document.getElementById("num1").value);
+        const num2 = parseFloat(document.getElementById("num2").value);
+        const resultDiv = document.getElementById("result");
+        const errorDiv = document.getElementById("error");
+
+        if (isNaN(num1) || isNaN(num2)) {
+          errorDiv.textContent = "Please enter valid numbers";
+          return;
+        }
+
+        if (num2 === 0) {
+          errorDiv.textContent = "Cannot divide by zero";
+          return;
+        }
+
+        const result = num1 / num2;
+        resultDiv.textContent = `Result: ${result}`;
+
+        if (result % 1 === 0) {
+          resultDiv.style.color = "#4CAF50"; // Green for whole numbers
+        } else {
+          resultDiv.style.color = "#2196F3"; // Blue for decimal numbers
+        }
+      }
+
+      // Add event listeners
+      document.getElementById("num1").addEventListener("input", function () {
+        this.style.backgroundColor = this.value ? "#f0f8ff" : "white";
+      });
+
+      document.getElementById("num2").addEventListener("input", function () {
+        this.style.backgroundColor = this.value ? "#f0f8ff" : "white";
+      });
+    </script>
+  </body>
+</html>

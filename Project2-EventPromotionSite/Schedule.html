@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Schedule</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(180deg, #ff763b 0%, #ffffff 40%);
+      }
+
+      header {
+        background-color: rgba(54, 54, 54, 0.9);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffffff;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-links li {
+        margin-left: 2rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 500;
+        transition: color 0.3s;
+        font-family: "Anonymous Pro", "Arial", sans-serif;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: #ff00e1;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+      }
+
+      .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 10px;
+      }
+
+      .main-content {
+        padding: 2rem 5%;
+      }
+      .section-title1{
+        font-family: "Anonymous Pro", "Arial", sans-serif;
+        color:rgb(0, 0, 0) ;
+        font-size: 42px;
+      }
+
+      .section-title {
+        text-align: center;
+        margin: 2rem 0;
+        color: #3700ff;
+        font-size: 2rem;
+        font-family: "Anonymous Pro", "Arial", sans-serif;
+        font-weight: 800;
+        padding-bottom: 1em;
+      }
+
+      .artist-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.2rem;
+        margin-bottom: 3rem;
+      }
+
+      .artist-card {
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        min-width: 400px;
+      }
+
+      .artist-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .artist-image {
+        width: 100%;
+        height: 376px;
+        object-fit: cover;
+      }
+
+      .artist-details {
+        padding: 1.5rem;
+      }
+
+      .artist-name {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #ff00e1;
+        font-family: "Anonymous Pro", "Arial", sans-serif;
+        font-weight: 800;
+      }
+
+      .artist-time {
+        color: #ff00e1;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        font-family: "Anonymous Pro", "Arial", sans-serif;
+        font-weight: 800;
+      }
+
+      .artist-description {
+        color: #3d3d3d;
+        line-height: 1.6;
+      }
+
+      footer {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 2rem;
+        margin-top: 2rem;
+       font-family:"Anonymous Pro", "Arial", sans-serif;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+
+      .footer-links a {
+        color: white;
+        margin: 0 1rem;
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+
+      .copyright {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #2c2c2c;
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: flex;
+        }
+
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          background-color: rgb(23, 23, 23);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          padding: 1rem 0;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .nav-links li {
+          margin: 1rem 0;
+          text-align: center;
+        }
+
+        .artist-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Summertime Jam</div>
+        <ul class="nav-links">
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="Schedule.html">Schedule</a></li>
+          <li><a href="Tickets.html">Tickets</a></li>
+          <li><a href="Details.html">Details</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <h1 class="section-title1">Schedule 2025</h1>
+      <h1 class="section-title">Performers</h1>
+
+      <div class="artist-grid">
+        <!-- First row -->
+        <div class="artist-card">
+          <img
+            src="https://placehold.co/364x376"
+            alt="Artist 1"
+            class="artist-image"
+          />
+          <div class="artist-details">
+            <h2 class="artist-name">MC Cipher</h2>
+            <p class="artist-time">24th May Friday, 8:00 PM - 9:30 PM</p>
+            <p class="artist-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+              dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed
+              auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+            </p>
+          </div>
+        </div>
+
+        <div class="artist-card">
+          <img
+            src="https://placehold.co/364x376"
+            alt="Artist 2"
+            class="artist-image"
+          />
+          <div class="artist-details">
+            <h2 class="artist-name">Verbal Venom</h2>
+            <p class="artist-time">25th May Friday, 10:00 PM - 11:30 PM</p>
+            <p class="artist-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+              dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed
+              auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+            </p>
+          </div>
+        </div>
+
+        <!-- Second row -->
+        <div class="artist-card">
+          <img
+            src="https://placehold.co/364x376"
+            alt="Artist 3"
+            class="artist-image"
+          />
+          <div class="artist-details">
+            <h2 class="artist-name">Lyric Divine</h2>
+            <p class="artist-time">26th May Saturday, 8:00 PM - 9:30 PM</p>
+            <p class="artist-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+              dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed
+              auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+            </p>
+          </div>
+        </div>
+
+        <div class="artist-card">
+          <img
+            src="https://placehold.co/364x376"
+            alt="Artist 4"
+            class="artist-image"
+          />
+          <div class="artist-details">
+            <h2 class="artist-name">Scratch Master J</h2>
+            <p class="artist-time">27th May Saturday, 10:00 PM - 11:30 PM</p>
+            <p class="artist-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+              dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed
+              auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>22 Unity Street, Anytown, USA 12345</p>
+              <p>info@eventname.com | +1 (123) 456-7890</p>
+              <p class="copyright">© 2025 Summertime Jam. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
