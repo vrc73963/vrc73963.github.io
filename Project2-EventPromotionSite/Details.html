@@ -19,7 +19,7 @@
       }
 
       body {
-        background: linear-gradient(180deg, #ffffff 0%, #ff763b 40%);
+        background: linear-gradient(180deg, #f1ff59 0%, #ffffff 60%);
       }
 
       header {
@@ -28,6 +28,26 @@
         position: sticky;
         top: 0;
         z-index: 1000;
+      }
+      .map {
+        padding: 7em;
+      }
+      h1 {
+        font-family: "Anonymous Pro", "Arial", sans-serif;
+        padding-bottom: 2em;
+        color: #3700ff;
+      }
+      p {
+        font-family: "Anonymous Pro", "Arial", sans-serif;
+        font-weight: 500;
+      }
+      img {
+        transition: transform 0.3s ease;
+      }
+
+      img:hover {
+        -webkit-transform: scale(1.5); /* or some other value */
+        transform: scale(1.5);
       }
 
       .navbar {
@@ -95,8 +115,8 @@
         font-weight: 800;
       }
       footer {
-        background-color: #333;
-        color: white;
+        background-color: #ffffff;
+        color: rgb(29, 28, 28);
         text-align: center;
         padding: 2rem;
         margin-top: 2rem;
@@ -126,7 +146,7 @@
       .copyright {
         margin-top: 1rem;
         font-size: 0.9rem;
-        color: #ccc;
+        color: #626262;
       }
 
       @media (max-width: 768px) {
@@ -160,37 +180,54 @@
         }
       }
     </style>
-    </head>
-    <body>
-        <header>
-          <nav class="navbar">
-            <div class="logo">Summertime Jam</div>
-            <ul class="nav-links">
-              <li><a href="Index.html">Home</a></li>
-              <li><a href="Schedule.html">Schedule</a></li>
-              <li><a href="Tickets.html">Tickets</a></li>
-              <li><a href="Details.html">Details</a></li>
-              <li><a href="Contact.html">Contact</a></li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </nav>
-        </header>
-        <footer>
-            <div class="footer-content">
-              <p>22 Unity Street, Anytown, USA 12345</p>
-              <p>info@eventname.com | +1 (123) 456-7890</p>
-              <p class="copyright">© 2025 Summertime Jam. All rights reserved.</p>
-            </div>
-          </footer>
-      
-          <script>
-            function toggleMenu() {
-              document.querySelector(".nav-links").classList.toggle("active");
-            }
-          </script>
-        </body>
-      </html>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Summertime Jam</div>
+        <ul class="nav-links">
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="Schedule.html">Schedule</a></li>
+          <li><a href="Tickets.html">Tickets</a></li>
+          <li><a href="Details.html">Details</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="map">
+        <h1>Details</h1>
+        <p>
+          Immerse yourself in the ultimate hip hop experience! Summertime Jam is
+          more than just a concert it's a celebration of music, culture, and
+          community. Join us at Summertime Jam for a night of incredible
+          performances, electrifying atmosphere, and unforgettable moments. From
+          the head-banging beats to the thought-provoking lyrics, this event
+          will leave you breathless. Featuring MC cipher, Verbal Venom, Lyric
+          Divine and Scratch master J this is a hip hop event you won't want to
+          miss.
+        </p>
+        <img src="https://placehold.co/700x476" alt="map" class="map" />
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>22 Unity Street, Anytown, USA 12345</p>
+        <p>info@eventname.com | +1 (123) 456-7890</p>
+        <p class="copyright">© 2025 Summertime Jam. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
