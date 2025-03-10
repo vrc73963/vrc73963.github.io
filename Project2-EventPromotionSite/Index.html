@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Event Schedule</title>
+    <title>Home | Summertime Jam</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <!-- Favicon link -->
+    <link rel="icon" href="images/sc/STJ-FAVICON.png" type="favicon" />
     <style>
       * {
         margin: 0;
@@ -21,8 +23,8 @@
       body {
         background: linear-gradient(
           180deg,
-          #ff763b 3%,
-          #7bf6ff 40%,
+          #ff763b 7%,
+          #7bf6ff 44%,
           #5bff9a 90%
         );
       }
@@ -58,6 +60,8 @@
       h2 {
         padding-top: 5em;
         font-family: "Anonymous Pro", "Arial", sans-serif;
+        font-size: 42px;
+        font-weight: 400;
       }
 
       .ticketlink {
@@ -92,7 +96,8 @@
       .logo {
         font-size: 1.5rem;
         font-weight: bold;
-        color: #ffffff;
+        color: #f1520ea3;
+        font-family: "Anonymous Pro", "Arial", sans-serif;
       }
 
       .nav-links {
@@ -152,7 +157,7 @@
         text-align: center;
         padding: 2rem;
         margin-top: 2rem;
-        padding-bottom: 4em;
+        padding-bottom: 6em;
       }
 
       .footer-content {
@@ -253,7 +258,7 @@
 
       <script>
         function updateTimer() {
-          const eventDate = new Date("2025-12-26T12:00:00").getTime(); // Set your event date and time
+          const eventDate = new Date("2025-07-26T12:00:00").getTime(); // Set your event date and time
           const now = new Date().getTime();
           const difference = eventDate - now;
 
@@ -276,14 +281,14 @@
         }
 
         setInterval(updateTimer, 1000);
-        updateTimer(); // Initial call to prevent delay
+        updateTimer();
       </script>
     </main>
 
     <footer>
       <div class="footer-content">
         <p>22 Unity Street, Anytown, USA 12345</p>
-        <p>info@eventname.com | +1 (123) 456-7890</p>
+        <p>info@Summerjam.com | +1 (123) 456-7890</p>
         <p class="copyright">© 2025 Summertime Jam. All rights reserved.</p>
       </div>
     </footer>
