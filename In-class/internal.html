@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internal</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        animation: slide 3s ease-in-out infinite;
+      }
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(300px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark mode toggle</title>
+    <style>
+      body {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: all 0.3s ease;
+      }
+      body.dark.mode {
+        background-color: black;
+        color: aliceblue;
+      }
+      input[type="checkbox"] {
+        display: none;
+      }
+      label {
+        display: inline-block;
+        background-color: #ddd;
+        width: 150px;
+        height: 30px;
+        border-radius: 30px;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        line-height: 30px;
+        font-size: 16px;
+      }
+      label::before {
+        content: "Light Mode";
+        position: absolute;
+        left: 10px;
+        width: 70px;
+        transition: all 0.3s;
+      }
+      label::after {
+        content: "Dark Mode";
+        position: absolute;
+        right: 10px;
+        width: 70px;
+        transition: all 0.3s;
+      }
+      input[type="checkbox"]:checked + label {
+        background-color: #333;
+      }
+      input[type="checkbox"]:checked + label::before {
+        content: "Dark Mode";
+        left: 40px;
+      }
+      input[type="checkbox"]:checked + label::after {
+        content: "Light mode";
+        right: 10px;
+      }
+      .toggle-container {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dark Mode Toggle</h1>
+    <div class="toggle-container">
+      <input type="checkbox" id="darkModeToggle" />
+      <label for="darkModeToggle"></label>
+    </div>
+  </body>
+</html>

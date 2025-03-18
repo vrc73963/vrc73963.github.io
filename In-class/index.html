@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline Css Animation</title>
+  </head>
+  <body>
+    <div
+      style="
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        animation: colorchange 2s infinite;
+      "
+    ></div>
+    <style>
+        @keyframes colorchange {
+            0% {background-color: blue;}
+            50% {background-color: red;}
+            100% {background-color: blue;}
+            
+        }
+    </style>
+  </body>
+</html>
