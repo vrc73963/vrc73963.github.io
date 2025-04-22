@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search the Library of Congress</title>
+</head>
+<body>
+  <h1>Search the Library of Congress</h1>
+  <input type="text" id="searchInput" placeholder="Enter a topic (e.g., jazz, civil rights)" />
+  <button id="searchBtn">Search</button>
+  <div id="locResult"></div>
+  <script>
+    document.getElementById("searchBtn").addEventListener("click", () => {
+      const userInput = document.getElementById("searchInput").value.trim();
+      if (userInput === "") {
+        document.getElementById("locResult").innerHTML = "Please enter a topic.";
+        return;
+      }
+const apiURL = `https://www.loc.gov/search/?q=${encodeURIComponent(userInput)}&fo=json`;
+ fetch(apiURL)
+        .then(response => response.json())
+        .then(data => {
+          if (data.results && data.results.length > 0) {
+            const firstItem = data.results[0];
+            const title = firstItem.title;
+            const link = firstItem.url;
+            document.getElementById("locResult").innerHTML = `
+              <h2>${title}</h2>
+              <p><a href="${link}" target="_blank">View Item on LOC</a></p> `;
+            } else {
+            document.getElementById("locResult").innerHTML = "No results found.";
+          }
+        })
+        .catch(error => {
+          console.error("Error:", error);
+          document.getElementById("locResult").innerHTML = "Could not load data.";
+        });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library of congress music search</title>
+</head>
+<body>
+    <h1>Library of Congress: Music Search</h1>
+    <button id="searchbtn">Find Music Item</button>
+    <div id="locresult"></div>
+
+    <script>
+        document.getElementById("searchbtn").addEventListener("click", () => {
+          fetch("https://www.loc.gov/search/?q=music&fo=json")
+          .then(response => response.json())
+          .then(data => {
+            const firstitem = data.result[0];//get the first result
+            const title = firstitem.title;
+            const link = firstitem.url
+
+            document.getElementById("locresult").innerHTML = `
+            <h2>${title}</h2>
+            <p><a href="${link}" target ="_blank">View item on loc</a></p>
+
+            `;
+          })
+          .catch(error => {
+            console.error("ERROR:",error);
+            document.getElementById("locresult").innerHTML = "could not load data.";
+          });
+        });
+        
+    </script>
+    
+</body>
+</html>
