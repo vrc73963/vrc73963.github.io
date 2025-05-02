@@ -32,7 +32,7 @@ function fetchWeatherData() {
     errorContainer.textContent = 'Loading...';
     
     // API URL
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${c019516425808b7d42b532278701d28}`;
+    const apiUrl = `https://api.weatherstack.com/data/2.5/weather?q=${city}&units=metric&appid=${9c019516425808b7d42b532278701d28}`;
     
     // Fetch data from API
     fetch(apiUrl)
@@ -83,7 +83,7 @@ function displayWeatherData(data) {
         <div class="weather-main">
             <div class="temperature">${temperature}°C</div>
             <div class="weather-icon">
-                <img src="http://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="${description}">
+                <img src="http://weatherstack.com/img/wn/${weatherIcon}@2x.png" alt="${description}">
                 <div>${description}</div>
             </div>
         </div>
