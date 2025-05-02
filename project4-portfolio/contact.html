@@ -19,7 +19,7 @@
       }
 
       header {
-        background: linear-gradient(90deg, #181a4c 10%, #f8e8e8 100%);
+        background-color: #181a4c;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         position: sticky;
         top: 0;
@@ -47,13 +47,17 @@
 
       nav ul li a {
         text-decoration: none;
-        color: #252525;
+        color: #ffffff;
         font-weight: 500;
         transition: color 0.3s;
       }
 
       nav ul li a:hover {
         color: #4a6fd8;
+      }
+
+      nav ul li a.active {
+        color: #f35395;
       }
 
       .hamburger {
@@ -99,9 +103,8 @@
       .profile-picture {
         width: 200px;
         height: 200px;
-        border-radius: 8px; /* Square with slightly rounded corners */
+        border-radius: 4px;
         object-fit: cover;
-        border: 5px solid #f5f7fa;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         margin-bottom: 30px;
       }
@@ -236,7 +239,7 @@
         position: absolute;
         top: 15px;
         right: 20px;
-        color: rgb(188, 84, 84);
+        color: rgb(255, 255, 255);
         background-color: #233669;
         width: 35px;
         height: 35px;
